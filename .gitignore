@@ -1,2 +1,7 @@
+#directory for node js modules
 node_modules/
+
+#file for db connection (sensitive info)
 connection.js
+
+_Project Notes - Online Portfolio
