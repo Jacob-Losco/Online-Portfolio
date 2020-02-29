@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+  <head name="index">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Bitter|Montserrat|Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/index.css" />
+  </head>
+  <div id=container>
+    <div id="navbarContainer">
+      <script type="text/javascript" src="../static/src/navbar/setNavbar.js"></script>
+    </div>
+    <body>
+      <div id="headerBox">
+        <p id="headerTitle"></p>
+        <p id="headerSub"><span class="subWord">A</span> <span class="subWord">SOFTWARE</span> <span class="subWord">DEVELOPER</span> <span class="subWord">AND</span> <span class="subWord">DESIGNER</span></p>
+      </div>
+      <div id="aboutBox">
+        <div class="aboutButtonBox">
+          <p id="aboutOpenButton">Read more about me</p>
+          <div id="aboutDot"></div>
+        </div>
+        <div id="textBox">
+          <p id="aboutText">
+            <% for(var i = 0; i < aboutText.length; i++) { %>
+              <%= aboutText[i] %> </br></br>
+            <% } %>
+        </div>
+        <div class="aboutButtonBox">
+          <p id="aboutCloseButton">Collapse</p>
+        </div>
+      </div>
+    </body>
+  </div>
+  <footer>
+    <script type="text/javascript" src="../static/src/footer/setFooter.js"></script>
+  </footer>
+  <script type="text/javascript" src="../static/src/index/read_more_drop.js"></script>
+  <script type="text/javascript" src="../static/src/index/title_animation.js"></script>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html>
+  <head name="projects">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=
+      Lato|Bitter|Open+Sans+Condensed:300|ZCOOL+QingKe+HuangYou&display=swap" 
+      rel="stylesheet"/>
+    <link rel="stylesheet" href="../static/css/projects.css" />
+  </head>
+  <div id="container">
+    <div id="navbarContainer">
+      <script type="text/javascript" src="../static/src/navbar/setNavbar.js"></script>
+    </div>
+    <body>
+      <div id="headerBox">
+        <p id="headerTitle">View My Projects</p>
+        <p id="headerSub">
+          Interested in more of my work? Visit my Github page!
+        </p>
+      </div>
+      <ul id="tabBox">
+        <li class="tab websiteTab">
+          <p>Website</p>
+        </li>
+        <li class="tab desktopTab">
+          <p>Desktop / CLI</p>
+        </li>
+        <li class="tab mobileTab">
+          <p>Mobile</p>
+        </li>
+      </ul>
+      <div id="showcaseBox">
+        <% var iterations = 0 %>
+        <% for(var i = 0; i < 3; i++) { %>
+          <div class="showcaseSectionBox">
+            <% for(var j = 0; j < 3; j++) { %>
+              <div class="displayBox">
+                <div class = "viewImageBox"> 
+                  <!-- <img class="viewImage" src= <%= projectData[iterations][7] %>></img> -->
+                </div>
+                  <div id=<%= (iterations + 1)%> class="viewBox">
+                  <% if(!projectData[iterations][0]) { %>
+                    <button class="viewButton">Coming Soon!</button>
+                  <% } else { %>
+                    <button class="viewButton">View</button>
+                  <% } %>
+                </div>
+              </div>
+              <% iterations++ %>
+            <% } %>
+          </div>
+        <% } %>
+      </div>
+      <div id="bioBox">
+        <% for(var i = 0; i < 9; i++) { %>
+          <% if(!(!projectData[i][0])) { %>
+            <div id=<%= (i + 1) %>  class="bio bioHidden">
+              <div class="bioImageBox">
+                <img class="bioImage" src=<%= projectData[i][7] %>></img>
+              </div>
+              <div class="bioInfoBox">
+                <div class="bioInfoTitleBox">
+                  <p class="bioInfoTitleHeader">Project:</p>
+                  <p class="bioInfoTitleName"><%= projectData[i][0] %></p>
+                </div>
+                <% for(var j = 1; j <= 3; j++) { %>
+                  <ul class="descriptionBox">
+                  <% for(var k = 0; k < 4; k++) { %>
+                    <li class="bioInfoDescriptionItem"><%= projectData[i][j][k] %></li>
+                  <% } %>
+                  </ul>
+                <% } %>
+                <p class="bioAboutBox"><%= projectData[i][4] %></p>
+                <div class="bioButtonBox">
+                  <% if(projectData[i][5]) { %>
+                    <button class="bioButton visit">visit</button>
+                  <% } else { %>
+                    <button class="bioButton visit buttonHidden"></button>
+                  <% } %>
+                  <% if(projectData[i][6]) { %>
+                    <button class="bioButton source">source</button>
+                  <% } else { %>
+                    <button class="bioButton source buttonHidden"></button>
+                  <% } %>
+                </div>
+              </div>
+            </div>
+          <% } %>
+        <% } %>
+      </div>
+    </body>
+  </div>
+  <footer>
+    <script type="text/javascript" src="../static/src/footer/setFooter.js"></script>
+  </footer>
+  <script type="text/javascript" src="../static/src/projects/showcaseTabSwitch.js"></script>
+  <script type="text/javascript" src="../static/src/projects/bioViewAction.js"></script>
+</html>

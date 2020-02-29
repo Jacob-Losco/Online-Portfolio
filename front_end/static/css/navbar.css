@@ -1,0 +1,78 @@
+:root{
+  --navBackground: transparent;
+  --navTextColor: white;
+  --navLinkHighlightBackground: white;
+  --navLinkHighlightTextColor: black;
+}
+
+#navbarContainer{
+  height: 15%;
+  width: 100%;
+  position: fixed;
+  justify-content: space-around;
+  background-color: var(--navBackground);
+  transition: all .3s ease-in;
+  z-index: 3;
+}
+
+#navbarLogoBox{
+  display: inline-block;
+  width: 49.8%;
+  height: 100%;
+  position: relative;
+  left: .1%;
+  align-items: center;
+}
+
+#navbarLinksBox{
+  display: inline-block;
+  width: 49.8%;
+  height: 100%;
+  position: relative;
+  left: .1%;
+  bottom: 37%;
+  align-items: center;
+}
+
+#navbarLogoBox a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 20%;
+  right: 30%;
+  cursor: default;
+}
+
+#navbarLogo{
+  height: 55%;
+  width: 15%;
+  cursor: pointer;
+  position: relative;
+  top: 25%;
+  left: 15%;
+}
+
+#navList{
+  display: flex;
+  list-style: none;
+  position: relative;
+  top: 40%;
+  width: 60%;
+}
+
+#navList a{
+  text-decoration: none;
+  color: var(--navTextColor);
+  font-family: 'Lato', sans-serif;
+  font-size: 24px;
+  cursor: pointer;
+  transition: all .3s ease-in;
+}
+
+#navList a:hover{
+  color: var(--navLinkHighlightTextColor);
+  background-color: var(--navLinkHighlightBackground);
+  border-radius: 10%;
+  font-size: 28px;
+}

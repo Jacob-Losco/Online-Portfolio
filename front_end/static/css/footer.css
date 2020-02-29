@@ -1,0 +1,52 @@
+#footerBox{
+  height: 30vh;
+  width: 100%;
+  background-color: rgb(50, 50, 50);
+}
+
+#footerTitle{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: 'Bitter', sans-serif;
+  font-size: 52px;
+  height: 40%;
+  letter-spacing: 15px;
+}
+
+#footerLinkList{
+  display: flex;
+  list-style: none;
+  position: relative;
+  top: 10%;
+}
+
+.footerLinkIcon{
+  height: 70px;
+  width: 70px;
+  transition: all .1s ease-in;
+}
+
+.footerLinkIcon:hover{
+  height: 80px;
+  width: 80px;
+}
+
+#quoteBox{
+  height: 8vh;
+  width: 100%;
+  background-color: rgb(28, 28, 28);
+  text-align: center;
+  word-spacing: 5px;
+}
+
+#quoteBox p{
+  color: white;
+}
+
+#quoteCite{
+  position: relative;
+  top: 10%;
+  word-spacing: 0;
+}

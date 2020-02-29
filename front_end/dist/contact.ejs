@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+  <head name="projects">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Slabo+27px&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/contact.css"></link>
+  </head>
+  <div id="navbarContainer">
+    <script type="text/javascript" src="../static/src/navbar/setNavbar.js"></script>
+  </div>
+  <body>
+    <form novalidate>
+      <p id="title">Contact Me:</p>
+      <p class="inputBox" id="nameBox">
+        <label for="name">
+          <span>Name:</span>
+          <input type="text" id="name" name="name">
+        </label>
+      </p>
+      <p class="inputBox" id="emailBox">
+        <label for="email">
+          <span>Email Address: <span class="requiredDot">*</span></span>
+          <input type="email" id="email" name="email" required>
+          <span class="error emailError" aria-live="polite"></span>
+        </label>
+      </p>
+      <p class="inputBox" id="reasonBox">
+      <label for="reason">Subject:</label>
+      <select id="reasonList">
+        <option>Just Saying Hi!</option>
+        <option>Business</option>
+        <option>Software</option>
+        <option>Youtube</option>
+        <option>Other</option>
+      </select>
+      <span class="about" aria-live="polite"></span>
+    </p>
+    <p class="inputBox" id="messageBox">
+      <label id="messageLabel" for="message">
+        <span>Message: <span class="requiredDot">*</span></span>
+      </label>
+      <textarea id="message" required></textarea>
+      <span class="messageError" aria-live="polite"></span>
+    </p>
+    <p id="buttonBox">
+      <button>Submit</button>
+    </p>
+    </form>
+  </body>
+  <footer>
+    <script type="text/javascript" src="../static/src/footer/setFooter.js"></script>
+  </footer>]
+  <script type="text/javascript" src="../static/src/contact/form_validation.js"></script>
+</html>

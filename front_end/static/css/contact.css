@@ -1,0 +1,181 @@
+*{
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(37, 37, 37);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+body{
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(50, 50, 50);
+}
+
+#title{
+  color: white;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 63px;
+  text-align: center;
+  position: relative;
+  top: 7%;
+  letter-spacing: 5px;
+}
+
+form{
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+.inputBox{
+  width: 20%;
+  height: 5%;
+  position: relative;
+  text-align: center;
+}
+
+.inputBox, span{
+  font-size: 28px;
+  color: white;
+}
+
+.about{
+  width: 20%;
+  height: 20%;
+  position: relative;
+  bottom: 65%;
+  left: 120%;
+  font-family: 'Slabo 27px', serif;
+  font-size: 20px;
+}
+
+.error{
+  width: 20%;
+  height: 20%;
+  position: relative;
+  bottom: 65%;
+  right: 130%;
+  color: red;
+  font-family: 'Slabo 27px', serif;
+  font-size: 21px;
+  opacity: 0;
+  transition: .5s ease-in;
+}
+
+.messageError{
+  color: red;
+  font-family: 'Slabo 27px', serif;
+  opacity: 0;
+  transition: .5s ease-in;
+}
+
+input{
+  background-color: rgb(60, 60, 60);
+  width: 100%;
+  height: 70%;
+  border-color: rgb(20, 64, 179);
+  color: white;
+}
+
+input:focus{
+  background-color: white;
+  color: black;
+}
+
+#nameBox{
+  top: 15%;
+}
+
+#emailBox{
+  top: 25%;
+}
+
+#reasonBox{
+  top: 35%;
+}
+
+#reasonList{
+  background-color: rgb(60, 60, 60);
+  width: 100%;
+  height: 70%;
+  border-color: rgb(20, 64, 179);
+  color: white;
+}
+
+#reasonList:focus{
+  background-color: white;
+  color: black;
+}
+
+#messageBox{
+  top: 45%;
+  width: 40%;
+  height: 30%;
+}
+
+#messageLabel{
+  width: 100%;
+  height: 100%;
+}
+
+#t1{
+  cursor: pointer;
+}
+
+.requiredDot{
+  color: red;
+  transition: .5s ease-in;
+}
+
+abbr:hover::after{
+  background-color: yellow;
+}
+
+textarea{
+  width: 100%;
+  height: 70%;
+  background-color: rgb(60, 60, 60);
+  border-color: rgb(20, 64, 179);
+  color: white;
+}
+
+textarea:focus{
+  background-color: white;
+  color: black;
+}
+
+#buttonBox{
+  text-align: center;
+  position: relative;
+  top: 50%;
+  height: 25%;
+}
+
+button{
+  height: 15%;
+  width: 10%;
+  position: relative;
+  bottom: 25%;
+  background-color: rgb(60, 60, 60);
+  border-color: rgb(20, 64, 179);
+  color: white;
+}
