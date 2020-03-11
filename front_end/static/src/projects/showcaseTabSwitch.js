@@ -12,21 +12,20 @@ let currentActive = 1;
 
 function setDomForActive(newActive){
   if(currentActive == 1){
-    websiteButton.style.width = "35%";
+    websiteButton.style.width = "var(--defaultTabWidth)";
     websiteButton.style.backgroundColor = "transparent";
     websiteButton.style.color = "white";
   }
   else if(currentActive == 2){
-    desktopButton.style.width = "35%";
+    desktopButton.style.width = "var(--defaultTabWidth)";
     desktopButton.style.backgroundColor = "transparent";
     desktopButton.style.color = "white";
   }
   else if(currentActive == 3){
-    mobileButton.style.width = "35%";
+    mobileButton.style.width = "var(--defaultTabWidth)";
     mobileButton.style.backgroundColor = "transparent";
     mobileButton.style.color = "white";
   }
-  //trash number for first run does nothing
 
   if(newActive == 1){
     websiteButton.style.width = "50%";

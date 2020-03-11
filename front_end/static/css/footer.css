@@ -25,12 +25,12 @@
 .footerLinkIcon{
   height: 70px;
   width: 70px;
-  transition: all .1s ease-in;
+  transition: all .2s ease-in;
 }
 
 .footerLinkIcon:hover{
-  height: 80px;
-  width: 80px;
+  height: 85px;
+  width: 85px;
 }
 
 #quoteBox{
@@ -43,10 +43,18 @@
 
 #quoteBox p{
   color: white;
+  background-color: rgb(28, 28, 28);
 }
 
 #quoteCite{
   position: relative;
   top: 10%;
   word-spacing: 0;
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 960px){
+  #footerTitle{
+    font-size: 40px;
+  }
 }

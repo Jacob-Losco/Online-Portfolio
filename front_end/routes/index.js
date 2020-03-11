@@ -9,7 +9,9 @@ getIndexData.then((res) => {
 })
 
 router.get("/", (req, res) => {
-  res.render(path.join(__dirname + "/../dist/index.ejs"), {aboutText: aboutParagraph});
+  res.render(path.join(__dirname + "/../dist/index.ejs"), {
+    aboutText: aboutParagraph
+  });
 });
 
 router.use("/projects", require("./projectRoute.js"));

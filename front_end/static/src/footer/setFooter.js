@@ -119,8 +119,3 @@ let quoteCite = document.createElement("p");
 quoteCite.id = "quoteCite";
 quoteCite.innerHTML = "Theodore Roosevelt, <i>The Man in the Arena</i>";
 quoteBox.appendChild(quoteCite);
-
-let scrollScript = document.createElement("script");
-scrollScript.type = "text/javascript";
-scrollScript.src = "../static/src/scrollbar/scrollCheck.js";
-footerContainer.appendChild(scrollScript);

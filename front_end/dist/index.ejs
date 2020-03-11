@@ -15,8 +15,13 @@
         <p id="headerSub"><span class="subWord">A</span> <span class="subWord">SOFTWARE</span> <span class="subWord">DEVELOPER</span> <span class="subWord">AND</span> <span class="subWord">DESIGNER</span></p>
       </div>
       <div id="aboutBox">
+        <ul id="extraNavButtonsBox">
+          <li><a id="extraNavButton" href="/projects">View Projects</a></li>
+          <li><a id="extraNavButton" href="#">View Resume</a></li>
+          <li><a id="extraNavButton" href="/contact">Contact Me</a></li>
+        </ul>
         <div class="aboutButtonBox">
-          <p id="aboutOpenButton">Read more about me</p>
+          <p id="aboutButton">Read more about me</p>
           <div id="aboutDot"></div>
         </div>
         <div id="textBox">
@@ -24,9 +29,6 @@
             <% for(var i = 0; i < aboutText.length; i++) { %>
               <%= aboutText[i] %> </br></br>
             <% } %>
-        </div>
-        <div class="aboutButtonBox">
-          <p id="aboutCloseButton">Collapse</p>
         </div>
       </div>
     </body>

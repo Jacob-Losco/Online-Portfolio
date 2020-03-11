@@ -1,18 +1,15 @@
 /*The html result of running script:
-*Container for navbar*
-
-<link rel="stylesheet" href="../static/css/navbar.css" />
-<div id="navbarLogoBox">
-  <img id="navbarLogo" src="../static/images/Jacob_Losco_White.png"><a href="#"></a></img>
-</div>
-<div id="navbarLinksBox">
-  <ul id="navList">
-    <li class="navElement"><a href="#">Projects</a></li>
-    <li class="navElement"><a href="#">Resume</a></li>
-    <li class="navElement"><a href="#">Contact</a></li>
-  </ul>
-</div>
+  *navbar container*
+    <link rel="stylesheet" href="../static/css/navbar.css" />
+    <ul id="navList">
+      <li class="navElement navDivider"><a href="/">Jacob Losco</a></li>
+      <li class="navElement"><a href="/projects">Projects</a></li>
+      <li class="navElement"><a href="#">Resume</a></li>
+      <li class="navElement"><a href="/contact">Contact</a></li>
+    </ul>
+    <script type="text/javascript" src="../static/src/navbar/scrollCheck.js"></script>
 */
+
 const navbarContainer = document.getElementById("navbarContainer");
 
 let navbarStyleSheet = document.createElement("link");
@@ -20,28 +17,21 @@ navbarStyleSheet.rel = "stylesheet";
 navbarStyleSheet.href = "../static/css/navbar.css";
 navbarContainer.appendChild(navbarStyleSheet);
 
-let navbarLogoBox = document.createElement("div");
-navbarLogoBox.id = "navbarLogoBox";
-navbarContainer.appendChild(navbarLogoBox);
-
-let navbarLogoLink = document.createElement("a");
-navbarLogoLink.href = "/";
-navbarLogoBox.appendChild(navbarLogoLink);
-let navbarLogo = document.createElement("img");
-navbarLogo.id = "navbarLogo";
-navbarLogo.src = "../static/images/Jacob_Losco_White.png";
-navbarLogoLink.appendChild(navbarLogo);
-
-let navbarLinksBox = document.createElement("div");
-navbarLinksBox.id = "navbarLinksBox";
-navbarContainer.appendChild(navbarLinksBox);
-
 let navList = document.createElement("ul");
 navList.id = "navList";
-navbarLinksBox.appendChild(navList);
+navbarContainer.appendChild(navList);
+
+let indexNavElement = document.createElement("li");
+indexNavElement.classList.add("navElement");
+indexNavElement.classList.add("navDivider");
+let indexLink = document.createElement("a");
+indexLink.href = "/";
+indexLink.innerHTML = "Jacob Losco";
+indexNavElement.appendChild(indexLink);
+navList.appendChild(indexNavElement);
 
 let projectNavElement = document.createElement("li");
-projectNavElement.id = "navElement";
+projectNavElement.classList.add("navElement");
 let projectLink = document.createElement("a");
 projectLink.href = "/projects";
 projectLink.innerHTML = "Projects";
@@ -49,7 +39,7 @@ projectNavElement.appendChild(projectLink);
 navList.appendChild(projectNavElement);
 
 let resumeNavElement = document.createElement("li");
-resumeNavElement.id = "navElement";
+resumeNavElement.classList.add("navElement");
 let resumeLink = document.createElement("a");
 resumeLink.href = "#";
 resumeLink.innerHTML = "Resume";
@@ -57,9 +47,14 @@ resumeNavElement.appendChild(resumeLink);
 navList.appendChild(resumeNavElement);
 
 let contactNavElement = document.createElement("li");
-contactNavElement.id = "navElement";
+contactNavElement.classList.add("navElement");
 let contactLink = document.createElement("a");
 contactLink.href = "/contact";
 contactLink.innerHTML = "Contact";
 contactNavElement.appendChild(contactLink);
 navList.appendChild(contactNavElement);
+
+let scrollScript = document.createElement("script");
+scrollScript.type = "text/javascript";
+scrollScript.src = "../static/src/navbar/scrollCheck.js";
+navbarContainer.appendChild(scrollScript);

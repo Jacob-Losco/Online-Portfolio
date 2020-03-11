@@ -24,8 +24,6 @@
   background: #555;
 }
 
-
-
 #container{
   width: 100%;
   height: 100vh;
@@ -33,7 +31,7 @@
 }
 
 #headerBox{
-  height: 52vh;
+  height: 50vh;
   width: 100%;
 }
 
@@ -88,6 +86,40 @@
   width: 100%;
 }
 
+#extraNavButtonsBox{
+  height: 20%;
+  width: 100%;
+  position: absolute;
+  top: 65%;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  transition: opacity 2s ease-out;
+}
+
+#extraNavButtonsBox li{
+  width: 20%;
+  display: flex;
+  justify-content: center;
+}
+
+#extraNavButton{
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  font-size: 35px;
+  border: solid rgb(20, 64, 179);
+  transition: .5s ease;
+  z-index: 2;
+  width: 70%;
+  text-align: center;
+}
+
+#extraNavButton:hover{
+  background-color: rgb(150, 150, 150, 0.2);
+}
+
 .aboutButtonBox{
   height: 20%;
   width: 100%;
@@ -95,19 +127,19 @@
   transition: 1.5s ease-in;
 }
 
-#aboutOpenButton{
+#aboutButton{
   width: 16%;
   display: flex;
   align-items: flex-start;
   justify-content: center;
   font-family: 'Lato', sans-serif;
-  font-size: 32px;
+  font-size: 28px;
   cursor: pointer;
   color: white;
   transition: .3s ease-in;
 }
 
-#aboutOpenButton:hover{
+#aboutButton:hover{
   color: rgb(20, 64, 179);
 }
 
@@ -145,22 +177,77 @@
   color: white;
   opacity: 0;
   text-align: center;
-  transition: 1s ease-in;
+  transition: .1s ease-in;
 }
 
-#aboutCloseButton{
-  width: 16%;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  font-family: 'Lato', sans-serif;
-  font-size: 32px;
-  cursor: pointer;
-  color: white;
-  opacity: 0;
-  transition: .3s ease-in;
+@media screen and (max-width: 1600px){
+  #aboutButton{
+    width: 20%;
+  }
 }
 
-#aboutCloseButton:hover{
-  color: rgb(20, 64, 179);
+@media screen and (max-width: 1475px){
+  #headerTitle{
+    font-size: 100px;
+  }
+
+  #extraNavButton{
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 1280px){
+  #headerTitle{
+    font-size: 85px;
+  }
+
+  #aboutButton{
+    width: 23%;
+  }
+
+  #extraNavButton{
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 1115px){
+  #headerTitle{
+    font-size: 75px;
+  }
+
+  #aboutButton{
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 1005px){
+  #headerTitle{
+    font-size: 60px;
+  }
+
+  #headerSub{
+    font-size: 40px;
+  }
+
+  #extraNavButton{
+    font-size: 35px;
+  }
+
+  #aboutButton{
+    width: 27%;
+  }
+
+  #aboutText{
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 790px){
+  #headerTitle{
+    font-size: 95px;
+  }
+
+  #headerSub{
+    font-size: 65px;
+  }
 }

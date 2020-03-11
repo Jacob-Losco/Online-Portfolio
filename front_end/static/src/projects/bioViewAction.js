@@ -1,35 +1,28 @@
-const buttons = document.getElementsByClassName("viewButton");
+const viewButtons = document.getElementsByClassName("viewButton");
+const exitButtons = document.getElementsByClassName("bioInfoHeaderExit");
 const bios = document.getElementsByClassName("bio");
-//indicates the index of the project currently being viewed, -1 if none
-let indexOfCurrentView = -1;
-
-function disableCurrentView(){
-    for(const bio of bios){
-        if(bio.id == indexOfCurrentView.toString()){
-            bio.style.display = "none";
-            for(const button of buttons)
-                if(button.parentElement.id == bio.id)
-                    button.innerHTML = "View";
-        }
-    }
-}
 
 function enableTargetView(targetI){
     for(const bio of bios){
         if(bio.id == targetI){
-            bio.style.display = "inline-block";
-            indexOfCurrentView = bio.id;
+            bio.parentElement.style.display = "flex";
+            bio.style.opacity = "1";
         }
     }
 }
 
-for(const button of buttons){
+for(const button of viewButtons){
     if(button.innerHTML == "View")
         button.addEventListener('click', () => {
-            if(indexOfCurrentView != -1)
-                disableCurrentView();
             let targetIndex = button.parentElement.id;
             enableTargetView(targetIndex);
-            button.innerHTML = "Viewing Below";
         });
+}
+for(const button of exitButtons){
+    button.addEventListener('click', () => {
+        //makes no display for bio box
+        button.parentElement.parentElement.parentElement.parentElement.style.display = "none";
+        //makes bio invisible
+        button.parentElement.parentElement.parentElement.style.opacity = "0";
+    });
 }

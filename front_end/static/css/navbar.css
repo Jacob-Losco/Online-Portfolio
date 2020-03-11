@@ -24,41 +24,31 @@
   align-items: center;
 }
 
-#navbarLinksBox{
-  display: inline-block;
-  width: 49.8%;
-  height: 100%;
-  position: relative;
-  left: .1%;
-  bottom: 37%;
-  align-items: center;
-}
-
-#navbarLogoBox a{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  top: 20%;
-  right: 30%;
-  cursor: default;
-}
-
-#navbarLogo{
-  height: 55%;
-  width: 15%;
-  cursor: pointer;
-  position: relative;
-  top: 25%;
-  left: 15%;
-}
-
 #navList{
   display: flex;
   list-style: none;
+  height: 100%;
+  width: 86%;
+}
+
+.navElement{
+  width: 20%;
+  text-align: center;
+  height: 25%;
+  display: flex;
+  align-items: center;
+  transition: .5s ease;
   position: relative;
-  top: 40%;
-  width: 60%;
+  top: 30%;
+  margin-right: 3%;
+}
+
+.navElement:hover{
+  background-color: rgb(150, 150, 150, 0.4);
+}
+
+.navDivider{
+  margin-right: 55%;
 }
 
 #navList a{
@@ -67,12 +57,30 @@
   font-family: 'Lato', sans-serif;
   font-size: 24px;
   cursor: pointer;
+  text-align: center;
   transition: all .3s ease-in;
 }
 
-#navList a:hover{
-  color: var(--navLinkHighlightTextColor);
-  background-color: var(--navLinkHighlightBackground);
-  border-radius: 10%;
-  font-size: 28px;
+@media screen and (max-width: 1635px){
+  .navDivider{
+    margin-right: 50%;
+  }
+}
+
+@media screen and (max-width: 1435px){
+  .navDivider{
+    margin-right: 40%;
+  }
+}
+
+@media screen and (max-width: 1155px){
+  .navDivider{
+    margin-right: 30%;
+  }
+}
+
+@media screen and (max-width: 1050px){
+  .navDivider{
+    margin-right: 0%;
+  }
 }
