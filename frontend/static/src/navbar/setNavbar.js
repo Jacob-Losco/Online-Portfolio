@@ -41,7 +41,7 @@ navList.appendChild(projectNavElement);
 let resumeNavElement = document.createElement("li");
 resumeNavElement.classList.add("navElement");
 let resumeLink = document.createElement("a");
-resumeLink.href = "#";
+resumeLink.href = "/resume";
 resumeLink.innerHTML = "Resume";
 resumeNavElement.appendChild(resumeLink);
 navList.appendChild(resumeNavElement);

@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const path = require('path');
-const getProjectData = require("../static/src/database/getProjectData.js");
+const getProjectData = require("../database/getProjectData.js");
 
 let projects = "nothing";
 getProjectData.then((res) => {
@@ -9,7 +9,7 @@ getProjectData.then((res) => {
 });
 
 router.get("/", (req, res) => {
-  res.render(path.join(__dirname + "/../dist/projects.ejs"),
+  res.render(path.join(__dirname + "../../../frontend/views/projects.ejs"),
     {
       projectData: projects
     });

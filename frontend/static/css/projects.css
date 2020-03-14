@@ -323,6 +323,7 @@
 
 .visit, .source{
   cursor: pointer;
+  text-align: center;
 }
 
 .visit, .source:hover{

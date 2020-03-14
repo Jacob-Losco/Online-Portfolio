@@ -1,4 +1,4 @@
-const mysqlConnection = require('../../../../connection.js');
+const mysqlConnection = require('./connection.js');
 
 let getProjectData = new Promise(function(resolve, reject) {
   let finalArray = [];

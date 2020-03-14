@@ -65,12 +65,12 @@
                       <p class="bioInfoAbout"><%=projectData[projectNumber][4]%></p>
                       <div class="bioInfoButtonsBox">
                         <% if(projectData[projectNumber][5]) { %>
-                          <button class="bioButton visit">Visit</button>
+                          <a class="bioButton visit" href=<%=projectData[projectNumber][9]%>>Visit</a>
                         <% } else {%>
                           <button class="bioButton disabled">Visit</button>
                         <% } %>
                         <% if(projectData[projectNumber][6]) { %>
-                          <button class="bioButton source">Source</button>
+                          <a class="bioButton source" href=<%=projectData[projectNumber][9]%>>Source</a>
                         <% } else {%>
                           <button class="bioButton disabled">Source</button>
                         <% } %>

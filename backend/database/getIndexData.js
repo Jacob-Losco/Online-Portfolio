@@ -1,4 +1,4 @@
-const mysqlConnection = require('../../../../connection.js');
+const mysqlConnection = require('./connection.js');
 
 let getIndexData = new Promise(function(resolve, reject) {
   mysqlConnection.query("Select aboutMe from Online_Portfolio.homeTable", (err, res) =>{

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+    <head name="index">
+        <link href="https://fonts.googleapis.com/css?family=Lato|Bitter|Montserrat|Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../static/css/resume.css" />
+      </head>
+    <div id=container>
+        <div id="navbarContainer">
+          <script type="text/javascript" src="../static/src/navbar/setNavbar.js"></script>
+        </div>
+        <body>
+            <div id="headerBox">
+                <p id="headerTitle">Download my Resume</p>
+                <p id="headerSub">
+                    <% if(available) { %>
+                        I am available for work! 
+                    <% } else { %>
+                        I am not available for work...
+                    <% } %>  
+                </p>
+            </div>
+            <ul id="resumeButtonBox">
+                <li>
+                    <a id="download" class="resumeLink" href="#">Download PDF</a>
+                    <a id="view" class="resumeLink" href="#">View in Browser</a>
+                </li>
+            </ul>
+        </body>
+    </div>
+    <footer>
+        <script type="text/javascript" src="../static/src/footer/setFooter.js"></script>
+    </footer>
+</html>

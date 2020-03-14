@@ -4,7 +4,9 @@ node_modules/
 #file for db connection (sensitive info)
 connection.js
 
-_Project Notes - Online Portfolio
-
+#personal files
+other/
 package-lock.json
-package.json
+
+#file that holds mailer api key (sensitive info)
+sendgrid.env
