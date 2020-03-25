@@ -1,0 +1,24 @@
+{
+  "name": "online-portfolio",
+  "version": "1.0.0",
+  "description": "The service that supports the online portfolio part of my web server",
+  "main": "app.js",
+  "author": "Jacob Losco",
+  "license": "ISC",
+  "scripts": {
+    "start": "node app.js",
+    "migrate": "knex migrate:latest",
+    "start-docker": "pm2-docker start pm2_configs/config.json",
+    "rollback": "knex migrate:rollback"
+  },
+  "dependencies": {
+    "@sendgrid/mail": "^6.5.5",
+    "body-parser": "^1.19.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "express-validator": "^6.4.0",
+    "mysql": "^2.18.1",
+    "path": "^0.12.7",
+    "util": "^0.12.2"
+  }
+}

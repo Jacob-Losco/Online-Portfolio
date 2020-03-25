@@ -7,6 +7,3 @@ connection.js
 #personal files
 other/
 package-lock.json
-
-#file that holds mailer api key (sensitive info)
-sendgrid.env
