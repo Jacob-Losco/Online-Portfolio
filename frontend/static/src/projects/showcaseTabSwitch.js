@@ -1,8 +1,8 @@
-const desktopBox = document.getElementsByClassName("tab desktopTab")[0];
+const desktopBox = document.getElementById("desktopTab");
 const desktopButton = desktopBox.children[0];
-const websiteBox = document.getElementsByClassName("tab websiteTab")[0];
+const websiteBox = document.getElementById("websiteTab");
 const websiteButton = websiteBox.children[0];
-const mobileBox = document.getElementsByClassName("tab mobileTab")[0];
+const mobileBox = document.getElementById("mobileTab");
 const mobileButton = mobileBox.children[0];
 const showcase = document.getElementById("showcaseBox");
 // 1 = website display
@@ -28,19 +28,19 @@ function setDomForActive(newActive){
   }
 
   if(newActive == 1){
-    websiteButton.style.width = "50%";
+    websiteButton.style.width = "90%";
     websiteButton.style.backgroundColor = "white";
     websiteButton.style.color = "black";
     showcase.style.left = "0%";
   }
   else if(newActive == 2){
-    desktopButton.style.width = "50%";
+    desktopButton.style.width = "90%";
     desktopButton.style.backgroundColor = "white";
     desktopButton.style.color = "black";
     showcase.style.left = "-100%";
   }
   else{
-    mobileButton.style.width = "50%";
+    mobileButton.style.width = "90%";
     mobileButton.style.backgroundColor = "white";
     mobileButton.style.color = "black";
     showcase.style.left = "-200%";

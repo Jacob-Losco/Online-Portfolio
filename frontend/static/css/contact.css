@@ -210,3 +210,13 @@ button{
     width: 20%;
   }
 }
+
+@media screen and (max-width: 998px){
+  #messageBox{
+    width: 75%;
+  }
+
+  .inputBox{
+    width: 65%;
+  }
+}

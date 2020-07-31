@@ -24,10 +24,15 @@
   background: #555;
 }
 
-#container{
+body{
+  padding: 0;
   width: 100%;
   height: 100vh;
   background-color: rgb(45, 45, 45);
+}
+
+.container-fluid{
+  height: 100vh;
 }
 
 #headerBox{
@@ -49,6 +54,7 @@
   letter-spacing: 10px;
   word-spacing: 15px;
   text-transform: uppercase;
+  text-align: center;
 }
 
 #headerSub{
@@ -70,6 +76,7 @@
 
 .subWord{
   margin: 10px;
+  margin-top: 0;
   transform: scale(1);
   transition: .4s ease-in;
 }
@@ -86,57 +93,44 @@
   width: 100%;
 }
 
-#extraNavButtonsBox{
-  height: 20%;
-  width: 100%;
-  position: absolute;
-  top: 65%;
+#indexNavButtonList{
   list-style: none;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  transition: opacity 2s ease-out;
+  font-size: 30px;
 }
 
-#extraNavButtonsBox li{
+#indexNavButtonList li{
   width: 20%;
-  display: flex;
-  justify-content: center;
-}
-
-#extraNavButton{
-  text-decoration: none;
-  color: white;
-  cursor: pointer;
-  font-size: 35px;
   border: solid rgb(20, 64, 179);
-  transition: .5s ease;
-  z-index: 2;
-  width: 70%;
   text-align: center;
+  cursor: pointer;
+  margin-bottom: 10px;
 }
 
-#extraNavButton:hover{
-  background-color: rgb(150, 150, 150, 0.2);
+#indexNavButton{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: white;
 }
 
 .aboutButtonBox{
-  height: 20%;
+  position: relative;
+  bottom: 0%;
+  height: 35%;
   width: 100%;
   opacity: 0;
-  transition: 1.5s ease-in;
+  transition: bottom 0s, opacity 1.5s ease-in;
 }
 
 #aboutButton{
-  width: 16%;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  font-family: 'Lato', sans-serif;
-  font-size: 28px;
-  cursor: pointer;
   color: white;
   transition: .3s ease-in;
+  text-align: center;
+  font-size: 25px;
+  width: 20%;
+  cursor: pointer;
+  position: relative;
+  top: 15%;
 }
 
 #aboutButton:hover{
@@ -149,7 +143,7 @@
   border-radius: 5%;
   background-color: rgb(20, 64, 179);
   position: relative;
-  top: 400%;
+  top: 2 76800%;
   transition: .7s ease-in;
 }
 
@@ -157,14 +151,14 @@
   height: 25px;
   width: 25px;
   border-radius: 50%;
-  background-color: rgb(20, 64, 179);
   position: relative;
   top: 15%;
+  background-color: rgb(20, 64, 179);
   transition: 1s ease-in;
 }
 
 #textBox{
-  height: 60%;
+  height: 10%;
   width: 100%;
 }
 
@@ -180,74 +174,86 @@
   transition: .1s ease-in;
 }
 
-@media screen and (max-width: 1600px){
-  #aboutButton{
-    width: 20%;
-  }
-}
-
-@media screen and (max-width: 1475px){
+@media screen and (max-width: 1500px){
   #headerTitle{
-    font-size: 100px;
-  }
-
-  #extraNavButton{
-    font-size: 28px;
-  }
-}
-
-@media screen and (max-width: 1280px){
-  #headerTitle{
-    font-size: 85px;
+    font-size: 95px;
   }
 
   #aboutButton{
-    width: 23%;
-  }
-
-  #extraNavButton{
-    font-size: 24px;
+    width: 25%;
   }
 }
 
-@media screen and (max-width: 1115px){
+@media screen and (max-width: 1210px){
   #headerTitle{
-    font-size: 75px;
-  }
-
-  #aboutButton{
-    font-size: 24px;
-  }
-}
-
-@media screen and (max-width: 1005px){
-  #headerTitle{
-    font-size: 60px;
-  }
-
-  #headerSub{
-    font-size: 40px;
-  }
-
-  #extraNavButton{
-    font-size: 35px;
+    font-size: 72px;
   }
 
   #aboutButton{
     width: 27%;
   }
 
-  #aboutText{
-    font-size: 16px;
+  #headerSub{
+    font-size: 40px;
   }
 }
 
-@media screen and (max-width: 790px){
+@media screen and (max-width: 992px){
   #headerTitle{
-    font-size: 95px;
+    font-size: 50px;
+  }
+
+  #aboutButton{
+    width: 35%;
   }
 
   #headerSub{
-    font-size: 65px;
+    font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 768px){
+  #aboutButton{
+    width: 50%;
+  }
+
+  #headerSub{
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 586px){
+  #headerTitle{
+    font-size: 42px;
+  }
+
+  #aboutButton{
+    width: 75%;
+  }
+
+  #aboutText{
+    font-size: 17px;
+  }
+
+  #headerSub{
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 445px){
+  #headerTitle{
+    font-size: 29px;
+  }
+
+  #headerSub{
+    font-size: 14px;
+  }
+
+  .subword{
+    margin: 4px;
+  }
+
+  #indexNavButton{
+    font-size: 25px;
   }
 }

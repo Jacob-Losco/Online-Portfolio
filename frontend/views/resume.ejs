@@ -2,33 +2,62 @@
 
 <html>
     <head name="index">
+        <!-- optional set charset--><meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--Standard Bootstrap library CDN--> <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css?family=Lato|Bitter|Montserrat|Open+Sans+Condensed:300&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="../static/css/resume.css" />
-      </head>
-    <div id=container>
+    </head>
+    <body id="container">
         <div id="navbarContainer">
-          <script type="text/javascript" src="../static/src/navbar/setNavbar.js"></script>
+          <link rel="stylesheet" href="../static/css/navbar.css" />
+          <nav class="navbar navbar-expand-md fixed-top">
+            <a class="navbar-brand" href="/">Jacob Losco</a>
+            <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="main-navigation">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="/projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/resume">Resume</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/contact">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <script type="text/javascript" src="../static/src/navbar/scrollCheck.js"></script>
         </div>
-        <body>
+        <div class="container-fluid">
             <div id="headerBox">
                 <p id="headerTitle">Download my Resume</p>
                 <p id="headerSub">
-                    <% if(available) { %>
+                    <% if(available == 1) { %>
                         I am available for work! 
-                    <% } else { %>
+                    <% } else if(available == 2) { %>
                         I am not available for work...
-                    <% } %>  
+                    <% } else { %>
+                        My resume is not available at the moment... sorry!
+                    <% } %>
                 </p>
             </div>
-            <ul id="resumeButtonBox">
-                <li>
+            <ul id="resumeButtonBox" class="row">
+                <li class="col-lg-5 col-md-8">
                     <a id="download" class="resumeLink" href="#">Download PDF</a>
+                </li>
+                <li class="col-lg-5 col-md-8">
                     <a id="view" class="resumeLink" href="#">View in Browser</a>
                 </li>
             </ul>
-        </body>
-    </div>
+        </div>
+    </body>
     <footer>
+        <!-- JQuery library for Boostrap --> <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <!-- Bootstrap Javascript library --> <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
         <script type="text/javascript" src="../static/src/footer/setFooter.js"></script>
     </footer>
 </html>

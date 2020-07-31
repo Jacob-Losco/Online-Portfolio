@@ -53,8 +53,25 @@
   margin-bottom: 0;
 }
 
-@media screen and (max-width: 960px){
+@media screen and (max-width: 768px){
   #footerTitle{
-    font-size: 40px;
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 586px){
+  #footerTitle{
+    font-size: 21px;
+  }
+
+  .footerLinkIcon{
+    height: 55px;
+    width: 55px;
+  }
+}
+
+@media screen and (max-width: 445px){
+  #footerTitle{
+    font-size: 14px;
   }
 }

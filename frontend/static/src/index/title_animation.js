@@ -9,10 +9,11 @@ async function typeWriter() {
   if (i < txt.length) {
     header.innerHTML += txt.charAt(i);
     i++;
+    if(i == 7 && screen.width <= 768)
+      header.innerHTML += "<br>";
     setTimeout(typeWriter, speed);
   }
 }
-
 subHeader.style.opacity = 1;
 about.style.opacity = 1;
 typeWriter();

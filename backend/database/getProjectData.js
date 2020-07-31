@@ -6,7 +6,7 @@ let getProjectData = new Promise(function(resolve, reject) {
     mysqlConnection.query("SELECT * from Online_Portfolio.projectDescriptionLinkTable", (err, descriptionRes) => {
       for(const project of projectRes){
         let projectArray = [];
-        projectArray.push(project.name);
+        projectArray.push(project.name); //0
         let genreArray = [];
         let languageArray = [];
         let technologyArray = [];
@@ -31,13 +31,13 @@ let getProjectData = new Promise(function(resolve, reject) {
         if(technologyArray.length < 4)
            for(var i = technologyArray.length; i < 4; i++)
              technologyArray.push("");
-        projectArray.push(genreArray, languageArray, technologyArray);
-        projectArray.push(project.about);
-        projectArray.push(project.viewButtonBool);
-        projectArray.push(project.sourceButtonBool);
-        projectArray.push(project.image_path);
-        projectArray.push(project.source_path);
-        projectArray.push(projectArray.visit_path);
+        projectArray.push(genreArray, languageArray, technologyArray); //1, 2, 3
+        projectArray.push(project.about); //4
+        projectArray.push(project.viewButtonBool); //5
+        projectArray.push(project.sourceButtonBool); //6
+        projectArray.push(project.image_path); //7
+        projectArray.push(project.source_path); //8
+        projectArray.push(projectArray.visit_path); //9
         finalArray.push(projectArray);
       }
       resolve(finalArray);

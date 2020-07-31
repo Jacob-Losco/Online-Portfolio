@@ -4,7 +4,7 @@ const path = require('path');
 
 router.get("/", (req, res) => {
   res.render(path.join(__dirname + "../../../frontend/views/resume.ejs"), {
-    available: true
+    available: 3
   });
 });
 

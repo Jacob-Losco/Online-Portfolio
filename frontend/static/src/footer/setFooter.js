@@ -2,7 +2,7 @@
 *Container for footer*
 <link rel="stylesheet" href="../static/css/footer.css" />
 <div id="footerBox">
-  <p id="footerTitle">Stay Connected With Me</p>
+  <p id="footerTitle">Connect With Me</p>
   <ul id = "footerLinkList">
     <li>
       <a href="https://github.com/Jacob-Losco" class="footerLink"><img class="footerLinkIcon" src="../static/images/Website_Github_Icon.png" /></a>
@@ -11,7 +11,7 @@
       <a href= "https://www.youtube.com/channel/UCHIsk5F9xZsk7i3WLQNGiWw/?guided_help_flow=5" class="footerLink"><img class="footerLinkIcon" src="../static/images/Website_Youtube_Icon.png" /></a>
     </li>
     <li>
-      <a href= "https://www.hackerrank.com/Jacob_Losco" class="footerLink"><img class="footerLinkIcon" src="../static/images/Website_Hackerrank_Icon.png" /></a>
+      <a href= "=https://www.linkedin.com/in/jacob-losco-976150192/" class="footerLink"><img class="footerLinkIcon" src="../static/images/Website_LinkedIn_Icon.png" /></a>
     </li>
     <li>
       <a href="https://leetcode.com/jacob-losco/" class="footerLink"><img class="footerLinkIcon" src="../static/images/Website_Leetcode_Icon.png" /></a>
@@ -20,14 +20,6 @@
       <a href="https://stackoverflow.com/users/11704042/jacob-losco" class="footerLink"><img class="footerLinkIcon" src="../static/images/Website_Stack_Icon.png" /></a>
     </li>
   </ul>
-</div>
-<div id="quoteBox">
-  <p id="quoteTitle">
-    "The credit belongs to the man who is actually in the arena,
-    whose face is marred by dust and sweat and blood; <br/>
-    Who strives valiently... who comes short again and again, because there is no effort without error and shortcoming..."
-  </p>
-  <p id="quoteCite">Theodore Roosevelt, <i>The Man in the Arena</i></p>
 </div>
 */
 
@@ -44,7 +36,7 @@ footerContainer.appendChild(footerBox);
 
 let footerTitle = document.createElement("p");
 footerTitle.id = "footerTitle";
-footerTitle.innerHTML = "Stay Connected With Me";
+footerTitle.innerHTML = "Connect With Me";
 footerBox.appendChild(footerTitle);
 
 let footerLinkList = document.createElement("ul");
@@ -73,16 +65,16 @@ youtubeIcon.src = "../static/images/Website_Youtube_Icon.png";
 youtubeIcon.classList.add("footerLinkIcon");
 youtubeLink.appendChild(youtubeIcon);
 
-let hackerListElement = document.createElement("li");
-footerLinkList.appendChild(hackerListElement);
-let hackerLink = document.createElement("a");
-hackerLink.href = "https://www.hackerrank.com/Jacob_Losco";
-hackerLink.classList.add("footerLink");
-hackerListElement.appendChild(hackerLink);
-let hackerIcon = document.createElement("img");
-hackerIcon.src = "../static/images/Website_Hackerrank_Icon.png";
-hackerIcon.classList.add("footerLinkIcon");
-hackerLink.appendChild(hackerIcon);
+let linkedListElement = document.createElement("li");
+footerLinkList.appendChild(linkedListElement);
+let linkedLink = document.createElement("a");
+linkedLink.href = "https://www.linkedin.com/in/jacob-losco-976150192/";
+linkedLink.classList.add("footerLink");
+linkedListElement.appendChild(linkedLink);
+let linkedIcon = document.createElement("img");
+linkedIcon.src = "../static/images/Website_LinkedIn_Icon.png";
+linkedIcon.classList.add("footerLinkIcon");
+linkedLink.appendChild(linkedIcon);
 
 let leetListElement = document.createElement("li");
 footerLinkList.appendChild(leetListElement);
@@ -105,17 +97,3 @@ let stackIcon = document.createElement("img");
 stackIcon.src = "../static/images/Website_Stack_Icon.png";
 stackIcon.classList.add("footerLinkIcon");
 stackLink.appendChild(stackIcon);
-
-let quoteBox = document.createElement("div");
-quoteBox.id = "quoteBox";
-footerContainer.appendChild(quoteBox);
-
-let quoteTitle = document.createElement("p");
-quoteTitle.id = "quoteTitle";
-quoteTitle.innerHTML = "'The credit belongs to the man who is actually in the arena, whose face is marred by dust and sweat and blood; <br/>Who strives valiently... who comes short again and again, because there is no effort without error and shortcoming...'"
-quoteBox.appendChild(quoteTitle);
-
-let quoteCite = document.createElement("p");
-quoteCite.id = "quoteCite";
-quoteCite.innerHTML = "Theodore Roosevelt, <i>The Man in the Arena</i>";
-quoteBox.appendChild(quoteCite);

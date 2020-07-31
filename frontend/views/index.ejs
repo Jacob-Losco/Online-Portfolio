@@ -2,24 +2,42 @@
 
 <html>
   <head name="index">
-    <link href="https://fonts.googleapis.com/css?family=Lato|Bitter|Montserrat|Open+Sans+Condensed:300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../static/css/index.css" />
+    <!-- optional set charset--><meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Standard Bootstrap library CDN--> <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!--Plugin for fonts--><link href="https://fonts.googleapis.com/css?family=Lato|Bitter|Montserrat|Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+    <!--Custom Css--><link rel="stylesheet" href="../static/css/index.css" />
   </head>
-  <div id=container>
+  <body>
     <div id="navbarContainer">
-      <script type="text/javascript" src="../static/src/navbar/setNavbar.js"></script>
+      <link rel="stylesheet" href="../static/css/navbar.css" />
+      <nav class="navbar navbar-expand-md fixed-top">
+        <a class="navbar-brand" href="/">Jacob Losco</a>
+        <button id="nav-toggler" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-navigation">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/resume">Resume</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <script type="text/javascript" src="../static/src/navbar/scrollCheck.js"></script>
     </div>
-    <body>
+    <div class="container-fluid">
       <div id="headerBox">
         <p id="headerTitle"></p>
-        <p id="headerSub"><span class="subWord">A</span> <span class="subWord">SOFTWARE</span> <span class="subWord">DEVELOPER</span> <span class="subWord">AND</span> <span class="subWord">DESIGNER</span></p>
+        <p id="headerSub"><span class="subWord">SOFTWARE</span> <span class="subWord">DEVELOPER</span> <span class="subWord">AND</span> <span class="subWord">DESIGNER</span></p>
       </div>
       <div id="aboutBox">
-        <ul id="extraNavButtonsBox">
-          <li><a id="extraNavButton" href="/projects">View Projects</a></li>
-          <li><a id="extraNavButton" href="/resume">View Resume</a></li>
-          <li><a id="extraNavButton" href="/contact">Contact Me</a></li>
-        </ul>
         <div class="aboutButtonBox">
           <p id="aboutButton">Read more about me</p>
           <div id="aboutDot"></div>
@@ -30,12 +48,21 @@
               <%= aboutText[i] %> </br></br>
             <% } %>
         </div>
+        <div id="indexNavButtonBox" class="container">
+          <ul id="indexNavButtonList" class="row"> 
+            <li class="col-lg-3 col-sm-7 col-8"><a id="indexNavButton" href="/projects">View Projects</a></li>
+            <li class="col-lg-3 col-sm-7 col-8"><a id="indexNavButton" href="/resume">View Resume</a></li>
+            <li class="col-lg-3 col-sm-7 col-8"><a id="indexNavButton" href="/contact">Contact Me</a></li>
+          </ul>
+        </div>
       </div>
-    </body>
-  </div>
+    </div>
+  </body>
   <footer>
     <script type="text/javascript" src="../static/src/footer/setFooter.js"></script>
   </footer>
+  <!-- JQuery library for Boostrap --> <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <!-- Bootstrap Javascript library --> <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   <script type="text/javascript" src="../static/src/index/read_more_drop.js"></script>
   <script type="text/javascript" src="../static/src/index/title_animation.js"></script>
 </html>

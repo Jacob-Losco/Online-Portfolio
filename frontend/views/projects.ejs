@@ -2,60 +2,85 @@
 
 <html>
   <head name="projects">
+    <!-- optional set charset--><meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Standard Bootstrap library CDN--> <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link
       href="https://fonts.googleapis.com/css?family=Lato|Bitter|Open+Sans+Condensed:300|ZCOOL+QingKe+HuangYou&display=swap" 
       rel="stylesheet"/>
     <link rel="stylesheet" href="../static/css/projects.css" />
   </head>
-  <div id="container">
+  <body>
     <div id="navbarContainer">
-      <script type="text/javascript" src="../static/src/navbar/setNavbar.js"></script>
+      <link rel="stylesheet" href="../static/css/navbar.css" />
+      <nav class="navbar navbar-expand-md fixed-top">
+        <a class="navbar-brand" href="/">Jacob Losco</a>
+        <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-navigation">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/resume">Resume</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <script type="text/javascript" src="../static/src/navbar/scrollCheck.js"></script>
     </div>
-    <body>
+    <div id="bodyBox" class="container-fluid"> 
       <div id="headerBox">
         <p id="headerTitle">View My Projects</p>
         <p id="headerSub">
           Interested in more of my work? <a id="headerSubLink" href="https://github.com/Jacob-Losco">Visit my Github page!</a>
         </p>
       </div>
-      <ul id="tabBox">
-        <li class="tab websiteTab">
-          <p>Website</p>
-        </li>
-        <li class="tab desktopTab">
-          <p>Desktop / CLI</p>
-        </li>
-        <li class="tab mobileTab">
-          <p>Mobile</p>
-        </li>
-      </ul>
+      <div class="container">
+        <ul id="tabBox" class="row">
+          <li id="websiteTab" class="col-lg-4 col-sm-7 tab">
+            <p>Website</p>
+          </li>
+          <li id="desktopTab" class="col-lg-4 col-sm-7 tab">
+            <p>Desktop / CLI</p>
+          </li>
+          <li id="mobileTab" class="col-lg-4 col-sm-7 tab">
+            <p>Mobile</p>
+          </li>
+        </ul>
+      </div>
       <div id="showcaseBox"> 
         <!-- iterations keeps track of the project that supplies image for displaybox-->
         <% var iterations = 0 %>
         <!-- creates three showcase views (web, desktop, mobile) and populates-->
         <% for(var i = 0; i < 3; i++) { %>
-          <div class="showcaseSectionBox">
-            <div class="bioBox">
-              <!-- loops through to add 4 needed project bios to each showcase view-->
-              <% for(var k = 0; k < 4; k++) { %>
-                <!-- projectNumber represents the current project that is being rendered-->
-                <% var projectNumber = (4 * i) + k %>
-                <% if(projectData[projectNumber][0]) {%>
-                  <div id=<%= projectNumber + 1 %> class="bio">
-                    <div class="bioImageBox">
+          <div class="showcaseSectionBox container-fluid">
+            <div class="bioBox container-fluid">
+              <!-- loops through to add 4 needed project bios to each showcase view -->
+              <% for(var j = 0; j < 4; j++) { %>
+                <!-- projectNumber represents the current project that is being rendered -->
+                <% var projectNumber = (4 * i) + j %>
+                <% if(projectData[projectNumber][0]) { %>
+                  <div id=<%= projectNumber + 1 %> class="bio row">
+                    <div class="bioImageBox col-lg-6 col-md-8 col-12">
                       <img class="bioImage" src=<%=projectData[projectNumber][7]%>></img>
                     </div>
-                    <div class="bioInfoBox">
+                    <div class="bioInfoBox col-lg-6 col-md-8 col-12">
                       <div class="bioInfoHeaderBox">
                         <div class="bioInfoHeaderExit">X</div>
-                        <p class="bioInfoHeaderTitle">Project:</p>
-                        <p class="bioInfoHeaderName"><%= projectData[projectNumber][0] %></p>
-                      </div>
+                          <p class="bioInfoHeaderTitle">Project:</p>
+                          <p class="bioInfoHeaderName"><%= projectData[projectNumber][0] %></p>
+                        </div>
                       <div class="bioInfoDescriptionsBox">
-                        <!-- loops through to add three rows of descriptions (genre, langauge, tech) -->
+                      <!-- loops through to add three rows of descriptions (genre, langauge, tech) -->
                         <% for(var l = 1; l < 4; l++) { %>
                           <div class="bioInfoDescriptionSectionBox">
-                            <!-- loops through to add four elements to the row -->
+                          <!-- loops through to add four elements to the row -->
                             <% for(var m = 0; m < 4; m++) { %>
                               <p class="description"><%=projectData[projectNumber][l][m]%></p>
                             <% } %> 
@@ -70,7 +95,7 @@
                           <button class="bioButton disabled">Visit</button>
                         <% } %>
                         <% if(projectData[projectNumber][6]) { %>
-                          <a class="bioButton source" href=<%=projectData[projectNumber][9]%>>Source</a>
+                          <a class="bioButton source" href=<%=projectData[projectNumber][8]%>>Source</a>
                         <% } else {%>
                           <button class="bioButton disabled">Source</button>
                         <% } %>
@@ -80,26 +105,9 @@
                 <% } %>
               <% } %>
             </div>
-            <ul class="showcaseSectionDisplayRow rowOne">
-              <% for(var j = 0; j < 2; j++) { %>
-                <li class="displayBox">
-                  <div class="viewImageBox">
-                    <img class="viewImage" src=<%=projectData[iterations][7]%>></img>
-                  </div>
-                  <div id= <%= (iterations + 1) %> class="viewButtonBox">
-                    <% if(!(projectData[iterations][0])) { %>
-                      <button class="viewButton">Coming Soon!</button>
-                    <% } else { %>
-                      <button class="viewButton">View</button>
-                    <% } %>
-                  </div>
-                </li>
-                <% iterations++ %>
-              <% } %>
-            </ul>
-            <ul class="showcaseSectionDisplayRow rowTwo">
-              <% for(var j = 0; j < 2; j++) { %>
-                <li class="displayBox">
+            <ul class="showcaseSectionDisplayRow row">
+              <% for(var j = 0; j < 4; j++) { %>
+                <li class="col-xl-5 col-md-7">
                   <div class="viewImageBox">
                     <img class="viewImage" src=<%=projectData[iterations][7]%>></img>
                   </div>
@@ -116,12 +124,14 @@
             </ul>
           </div>
         <% } %>
-      </div>
-    </body>
-  </div>
+      </div> 
+    </div>  
+  </body>
   <footer>
     <script type="text/javascript" src="../static/src/footer/setFooter.js"></script>
   </footer>
+  <!-- JQuery library for Boostrap --> <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <!-- Bootstrap Javascript library --> <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   <script type="text/javascript" src="../static/src/projects/showcaseTabSwitch.js"></script>
   <script type="text/javascript" src="../static/src/projects/bioViewAction.js"></script>
 </html>

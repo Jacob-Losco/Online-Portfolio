@@ -1,86 +1,54 @@
 :root{
   --navBackground: transparent;
   --navTextColor: white;
-  --navLinkHighlightBackground: white;
-  --navLinkHighlightTextColor: black;
+  --navLinkHighlightTextColor: rgb(20, 64, 179);
 }
 
-#navbarContainer{
-  height: 15%;
-  width: 100%;
-  position: fixed;
-  justify-content: space-around;
+.navbar{
   background-color: var(--navBackground);
   transition: all .3s ease-in;
-  z-index: 3;
 }
 
-#navbarLogoBox{
-  display: inline-block;
-  width: 49.8%;
-  height: 100%;
-  position: relative;
-  left: .1%;
-  align-items: center;
-}
-
-#navList{
-  display: flex;
-  list-style: none;
-  height: 100%;
-  width: 86%;
-}
-
-.navElement{
-  width: 20%;
-  text-align: center;
-  height: 25%;
-  display: flex;
-  align-items: center;
-  transition: .5s ease;
-  position: relative;
-  top: 30%;
-  margin-right: 3%;
-}
-
-.navElement:hover{
-  background-color: rgb(150, 150, 150, 0.4);
-}
-
-.navDivider{
-  margin-right: 55%;
-}
-
-#navList a{
-  text-decoration: none;
+.navbar-brand{
+  font-size: 25px;
+  margin-left: 25px;
   color: var(--navTextColor);
-  font-family: 'Lato', sans-serif;
-  font-size: 24px;
-  cursor: pointer;
-  text-align: center;
+}
+
+.navbar-brand:hover{
+  color: var(--navLinkHighlightTextColor);
+}
+
+.navbar-nav{
+  margin: 0;
+}
+
+.navbar-collapse{
+  justify-content: flex-end;
+}
+
+.nav-item{
+  margin-left: 0;
+}
+
+.navbar-nav .nav-link{
+  color: var(--navTextColor);
+  font-size: 20px;
+  margin-left: 25px;
   transition: all .3s ease-in;
 }
 
-@media screen and (max-width: 1635px){
-  .navDivider{
-    margin-right: 50%;
-  }
+.navbar-nav .nav-link:hover{
+  color: var(--navLinkHighlightTextColor);
 }
 
-@media screen and (max-width: 1435px){
-  .navDivider{
-    margin-right: 40%;
+@media screen and (max-width: 768px){
+  :root{
+    --navBackground: white;
+    --navTextColor: black;
   }
-}
 
-@media screen and (max-width: 1155px){
-  .navDivider{
-    margin-right: 30%;
-  }
-}
-
-@media screen and (max-width: 1050px){
-  .navDivider{
-    margin-right: 0%;
+  .navbar-toggler{
+    background: grey;
   }
 }
